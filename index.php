@@ -9,6 +9,7 @@
         <script src="js/jquery-2.1.0.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/jquery.bxslider.js"></script>
+        <script src="js/mustache.js"></script>
         <script src="js/index.js"></script>
 
     </head>
