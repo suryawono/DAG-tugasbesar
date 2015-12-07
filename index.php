@@ -16,7 +16,7 @@
         <?php
         $excludeURI = trim(trim($_SERVER['PHP_SELF'], "index.php"), "/");
         $uri = $_SERVER['REQUEST_URI'];
-        $uri=explode("?", $uri);
+        $uri = explode("?", $uri);
         $params = explode("/", trim(preg_replace("/\/" . $excludeURI . "/", "", $uri[0], 1), "/"));
         $requested_file = isset($params[1]) ? $params[1] : "home";
         require_once "helper.php";
@@ -27,67 +27,64 @@
         </script>
         <div class="wrapper">
             <div class="search-box">
-                <input type="text" placeholder="Search post or category..." value="<?= isset($_GET['term'])?$_GET['term']:"" ?>"><input type="button" value="Search" class="search-submit" id="search"/>
+                <input type="text" placeholder="Search post or category..." value="<?= isset($_GET['term']) ? $_GET['term'] : "" ?>"><input type="button" value="Search" class="search-submit" id="search"/>
             </div>
             <div class="top-menu">
                 <ul>
                     <li><a href="home">HOME</a></li>
-                    <li><a href="#">NEWS</a></li>
-                    <li><a href="#">BLOG</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">RULES</a></li>
-                    <li><a href="#">SUPPORT 4CHAN</a></li>
-                    <li><a href="#">ADVERTISE</a></li>
-                    <li><a href="#">PRESS</a></li>
-                    <li><a href="#">ZZZ</a></li>
+                    <li><a href="http://blog.4chan.org/">BLOG</a></li>
+                    <li><a href="faq">FAQ</a></li>
+                    <li><a href="rules">RULES</a></li>
                 </ul>
             </div>
             <div class="content">
                 <div class="row">
                     <div class="main-content col-lg-9">
                         <div class="slideshow-wrapper">
-                        <?php
-                        $helper->element("view/" . $requested_file);
-                        ?>
+                            <?php
+                            $helper->element("view/" . $requested_file);
+                            ?>
                         </div>
                     </div>
                     <div class="left-menu col-lg-3">
-                        <div class="category-group">
-                            <div class="group-title">
-                                Category
+                        <div>
+                            <div class="category-group">
+                                <div class="group-title">
+                                    Category
+                                </div>
+                                <ul class="hoverable parent-menu">
+                                    <li data-pagename="japanese-anime-wallpaper">Japanese Culture
+                                        <ul>
+                                            <li>Anime & Manga</li>
+                                            <li><a href="japanese-anime-wallpaper">Anime/Wallpaper</a></li>
+                                            <li>Cosplay</li>
+                                            <li>Pokemon</li>
+                                            <li>Mecha</li>
+                                            <li>Oytaku Culture</li>
+                                        </ul>
+                                    </li>
+                                    <li>Interests</li>
+                                    <li>Creative</li>
+                                    <li>Other</li>
+                                    <li>Miscellaneous</li>
+                                </ul>
                             </div>
-                            <ul class="hoverable parent-menu">
-                                <li data-pagename="japanese-anime-wallpaper">Japanese Culture
-                                    <ul>
-                                        <li>Anime & Manga</li>
-                                        <li><a href="japanese-anime-wallpaper">Anime/Wallpaper</a></li>
-                                        <li>Cosplay</li>
-                                        <li>Pokemon</li>
-                                        <li>Mecha</li>
-                                        <li>Oytaku Culture</li>
-                                    </ul>
-                                </li>
-                                <li>Interests</li>
-                                <li>Creative</li>
-                                <li>Other</li>
-                                <li>Miscellaneous</li>
-                            </ul>
-                        </div>
-                        <div class="popular-group">
-                            <div class="group-title">
-                                Popular Thread
+                            <div class="popular-group">
+                                <div class="group-title">
+                                    Popular Thread
+                                </div>
+                                <ul class="hoverable">
+                                    <li>Auto</li>
+                                    <li>Advice</li>
+                                    <li>Television & Film</li>
+                                    <li>Sport</li>
+                                    <li>Video Games</li>
+                                    <li>International</li>
+                                    <li>Airport</li>
+                                    <li>Art</li>
+                                    <li>Film</li>
+                                </ul>
                             </div>
-                            <ul class="hoverable">
-                                <li>Auto</li>
-                                <li>Advice</li>
-                                <li>Television & Film</li>
-                                <li>Sport</li>
-                                <li>Video Games</li>
-                                <li>International</li>
-                                <li>Airport</li>
-                                <li>Art</li>
-                                <li>Film</li>
-                            </ul>
                         </div>
                     </div>
                 </div>
@@ -95,10 +92,15 @@
             </div>
             <div class="footer">
                 <ul>
-                    <li>About</li>
-                    <li>Feedback</li>
-                    <li>Legal</li>
-                    <li>Contact</li>
+
+                    <li><a href="#">SUPPORT 4CHAN</a></li>
+                    <li><a href="#">ADVERTISE</a></li>
+                    <li><a href="#">PRESS</a></li>
+                    <li><a href="#">NEWS</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Feedback</a></li>
+                    <li><a href="#">Legal</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
             </div>
         </div>

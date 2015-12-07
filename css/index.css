@@ -99,6 +99,8 @@ time, mark, audio, video {
 .slideshow-wrapper{
     border:1px solid red;
     padding:5px 5px;
+    height:655px;
+    overflow-y: auto;
 }
 .bx-viewport{
     max-height:400px;
@@ -191,4 +193,44 @@ a{
 
 .hidden{
     display: none;
+}
+
+.left-menu > div{
+    overflow-y:auto;
+    height:655px;
+}
+
+.common-box{
+    border:1px solid black;
+    margin:2px 2px;
+    padding:3px 3px;
+}
+
+.rules-title-link{
+    font-size:22px;
+    color:blue;
+}
+
+.rules-item{
+    color:orange;
+}
+
+ol{
+    padding-left:40px;
+}
+
+.subtitle{
+    font-size:19px;
+    font-weight: 700;
+    margin:10px 0;
+}
+
+.faq-item-link{
+    color:blue;
+    font-size:24px;
+    padding:5px;
+}
+
+.padding-left-40{
+    padding-left:40px;
 }
