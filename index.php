@@ -28,7 +28,7 @@
         </script>
         <div class="wrapper">
             <div class="search-box">
-                <img src="img/logo.png" class="logo"/>
+                <a href="home"><img src="img/logo.png" class="logo"/></a>
                 <input type="text" placeholder="Search post or category..." value="<?= isset($_GET['term']) ? $_GET['term'] : "" ?>"><input type="button" value="Search" class="search-submit" id="search"/>
             </div>
             <div class="top-menu">
